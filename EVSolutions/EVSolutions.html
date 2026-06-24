@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FUSIONWORKS – EV Solutions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="EVSolutions.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="mainNav">
+    <a href="index.html" class="nav-logo">FUSIONWORKS</a>
+    <ul class="nav-links">
+      <li><a href="#ev-models">EV Models</a></li>
+      <li><a href="#ev-customize">Customize</a></li>
+      <li><a href="#ev-specs">Specs</a></li>
+      <li><a href="#ev-process">Process</a></li>
+      <li><a href="#ev-contact">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="#ev-contact" class="nav-consult">Book a Consult</a>
+      <button class="nav-burger" id="navBurger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO — Tesla-style: real image background, text top, car bottom -->
+  <section class="ev-hero" id="ev-hero">
+
+    <!-- Your actual background image -->
+    <div class="hero-bg"></div>
+
+    <!-- Text block — top center, dark text on bright sky -->
+    <div class="hero-text">
+      <h1>FusionWorks EV</h1>
+      <p>Built for the road ahead — custom-engineered electric vehicles</p>
+      <div class="hero-btns">
+        <a href="#ev-contact" class="hbtn hbtn--black">Configure Yours</a>
+        <a href="#ev-models" class="hbtn hbtn--outline">Explore Models</a>
+        <a href="#ev-contact" class="hbtn hbtn--dark">Book Test Drive</a>
+      </div>
+    </div>
+
+    <!-- Scroll chevron -->
+    <div class="hero-chevron">
+      <svg width="24" height="14" viewBox="0 0 24 14" fill="none">
+        <path d="M2 2l10 10L22 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </div>
+
+  </section>
+
+  <!-- STATS STRIP -->
+  <section class="ev-stats">
+    <div class="ev-stats__grid">
+      <div class="stat-item">
+        <span class="stat-number">0–100</span>
+        <span class="stat-label">km/h in 3.8 s</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">520 km</span>
+        <span class="stat-label">Range per Charge</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">100%</span>
+        <span class="stat-label">Custom-Built</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">22 min</span>
+        <span class="stat-label">10–80% Fast Charge</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- EV MODELS -->
+  <section class="ev-models" id="ev-models">
+    <div class="section-header">
+      <span class="eyebrow">Our Fleet</span>
+      <h2>Choose Your Platform</h2>
+      <p>Every FUSIONWORKS EV starts as a platform, then becomes yours.</p>
+    </div>
+    <div class="models-grid">
+
+      <article class="model-card fade-in" data-index="0">
+        <div class="model-card__visual model-card__visual--urban">
+          <div class="car-silhouette car-silhouette--sedan"></div>
+          <div class="model-card__glow"></div>
+        </div>
+        <div class="model-card__body">
+          <span class="model-tag">Urban Series</span>
+          <h3>FW Urban</h3>
+          <p>Compact, nimble, city-optimized. Zero compromise on tech or comfort.</p>
+          <ul class="model-specs">
+            <li><span>Range</span><strong>380 km</strong></li>
+            <li><span>0–100</span><strong>4.9 s</strong></li>
+            <li><span>Power</span><strong>220 kW</strong></li>
+          </ul>
+          <a href="#ev-contact" class="btn-card">Configure →</a>
+        </div>
+      </article>
+
+      <article class="model-card model-card--featured fade-in" data-index="1">
+        <div class="model-card__badge">Most Popular</div>
+        <div class="model-card__visual model-card__visual--apex">
+          <div class="car-silhouette car-silhouette--coupe"></div>
+          <div class="model-card__glow model-card__glow--blue"></div>
+        </div>
+        <div class="model-card__body">
+          <span class="model-tag">Apex Series</span>
+          <h3>FW Apex</h3>
+          <p>Performance meets elegance. The pinnacle of FusionWorks engineering.</p>
+          <ul class="model-specs">
+            <li><span>Range</span><strong>520 km</strong></li>
+            <li><span>0–100</span><strong>3.8 s</strong></li>
+            <li><span>Power</span><strong>380 kW</strong></li>
+          </ul>
+          <a href="#ev-contact" class="btn-card">Configure →</a>
+        </div>
+      </article>
+
+      <article class="model-card fade-in" data-index="2">
+        <div class="model-card__visual model-card__visual--cargo">
+          <div class="car-silhouette car-silhouette--suv"></div>
+          <div class="model-card__glow model-card__glow--green"></div>
+        </div>
+        <div class="model-card__body">
+          <span class="model-tag">Cargo Series</span>
+          <h3>FW Cargo</h3>
+          <p>Commercial-grade EV. Built for fleet, delivery, and heavy-duty runs.</p>
+          <ul class="model-specs">
+            <li><span>Range</span><strong>460 km</strong></li>
+            <li><span>0–100</span><strong>6.2 s</strong></li>
+            <li><span>Payload</span><strong>1200 kg</strong></li>
+          </ul>
+          <a href="#ev-contact" class="btn-card">Configure →</a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- CUSTOMIZE -->
+  <section class="ev-customize" id="ev-customize">
+    <div class="customize-inner">
+      <div class="customize-text fade-in">
+        <span class="eyebrow">Personalization</span>
+        <h2>Every Detail,<br>Your Decision</h2>
+        <p>From battery range to body finish, interior materials to drive mode — configure your FusionWorks EV exactly how you want it.</p>
+        <ul class="customize-list">
+          <li><div class="cl-icon">⚡</div><div><strong>Battery & Range</strong><span>Choose 200–600 km range packs</span></div></li>
+          <li><div class="cl-icon">🎨</div><div><strong>Exterior Finish</strong><span>40+ paint & wrap options</span></div></li>
+          <li><div class="cl-icon">🪑</div><div><strong>Interior Materials</strong><span>Vegan leather, alcantara, carbon trim</span></div></li>
+          <li><div class="cl-icon">🧠</div><div><strong>Smart Systems</strong><span>Integrated home-auto & AI drive assist</span></div></li>
+        </ul>
+        <a href="#ev-contact" class="hbtn hbtn--black">Start Configuring</a>
+      </div>
+      <div class="customize-visual fade-in">
+        <div class="color-picker-demo">
+          <div class="cpd-car">
+            <svg viewBox="0 0 320 160" xmlns="http://www.w3.org/2000/svg">
+              <ellipse cx="160" cy="130" rx="130" ry="12" fill="rgba(0,0,0,0.3)"/>
+              <path id="carBody" d="M40 110 Q40 90 60 85 L90 60 Q110 42 160 40 Q210 42 230 60 L260 85 Q280 90 280 110 Z" fill="#c0392b"/>
+              <path d="M95 62 L115 45 Q140 36 160 36 Q180 36 205 45 L225 62 Z" fill="rgba(100,180,255,0.5)" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+              <circle cx="95" cy="115" r="22" fill="#1a1a1a"/><circle cx="95" cy="115" r="14" fill="#2d2d2d"/><circle cx="95" cy="115" r="5" fill="#555"/>
+              <circle cx="225" cy="115" r="22" fill="#1a1a1a"/><circle cx="225" cy="115" r="14" fill="#2d2d2d"/><circle cx="225" cy="115" r="5" fill="#555"/>
+              <ellipse cx="272" cy="97" rx="8" ry="5" fill="rgba(255,240,180,0.9)"/>
+              <ellipse cx="48" cy="97" rx="8" ry="5" fill="rgba(255,100,100,0.6)"/>
+              <line x1="158" y1="58" x2="158" y2="108" stroke="rgba(0,0,0,0.2)" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <div class="cpd-colors">
+            <span class="cpd-label">Pick a Color</span>
+            <div class="color-swatches">
+              <button class="swatch swatch--active" style="background:#c0392b" data-color="#c0392b"></button>
+              <button class="swatch" style="background:#1a1a2e" data-color="#1a1a2e"></button>
+              <button class="swatch" style="background:#ecf0f1" data-color="#ecf0f1"></button>
+              <button class="swatch" style="background:#2c3e50" data-color="#2c3e50"></button>
+              <button class="swatch" style="background:#27ae60" data-color="#27ae60"></button>
+              <button class="swatch" style="background:#f39c12" data-color="#f39c12"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPECS -->
+  <section class="ev-specs" id="ev-specs">
+    <div class="section-header">
+      <span class="eyebrow">Technical</span>
+      <h2>Full Specifications</h2>
+    </div>
+    <div class="specs-tabs">
+      <button class="spec-tab spec-tab--active" data-tab="performance">Performance</button>
+      <button class="spec-tab" data-tab="battery">Battery</button>
+      <button class="spec-tab" data-tab="dimensions">Dimensions</button>
+      <button class="spec-tab" data-tab="tech">Tech</button>
+    </div>
+    <div class="specs-panels">
+      <div class="specs-panel specs-panel--active" id="tab-performance">
+        <div class="spec-row"><span>Top Speed</span><strong>220 km/h</strong></div>
+        <div class="spec-row"><span>0 – 100 km/h</span><strong>3.8 s</strong></div>
+        <div class="spec-row"><span>Peak Power</span><strong>380 kW</strong></div>
+        <div class="spec-row"><span>Peak Torque</span><strong>660 Nm</strong></div>
+        <div class="spec-row"><span>Drive System</span><strong>Dual Motor AWD</strong></div>
+        <div class="spec-row"><span>Regenerative Braking</span><strong>Adaptive 4-level</strong></div>
+      </div>
+      <div class="specs-panel" id="tab-battery">
+        <div class="spec-row"><span>Battery Capacity</span><strong>100 kWh</strong></div>
+        <div class="spec-row"><span>Range (WLTP)</span><strong>520 km</strong></div>
+        <div class="spec-row"><span>Charge Port</span><strong>CCS2 + AC Type 2</strong></div>
+        <div class="spec-row"><span>DC Fast Charge</span><strong>250 kW max</strong></div>
+        <div class="spec-row"><span>10–80% Charge Time</span><strong>22 min</strong></div>
+        <div class="spec-row"><span>Battery Warranty</span><strong>8 yrs / 160,000 km</strong></div>
+      </div>
+      <div class="specs-panel" id="tab-dimensions">
+        <div class="spec-row"><span>Length</span><strong>4,875 mm</strong></div>
+        <div class="spec-row"><span>Width</span><strong>1,964 mm</strong></div>
+        <div class="spec-row"><span>Height</span><strong>1,445 mm</strong></div>
+        <div class="spec-row"><span>Wheelbase</span><strong>2,960 mm</strong></div>
+        <div class="spec-row"><span>Boot Capacity</span><strong>680 L</strong></div>
+        <div class="spec-row"><span>Kerb Weight</span><strong>2,050 kg</strong></div>
+      </div>
+      <div class="specs-panel" id="tab-tech">
+        <div class="spec-row"><span>Display</span><strong>17" 4K Touchscreen</strong></div>
+        <div class="spec-row"><span>Driver Assist</span><strong>FW AutoPilot v3</strong></div>
+        <div class="spec-row"><span>Home Integration</span><strong>FusionWorks HomeOS</strong></div>
+        <div class="spec-row"><span>OTA Updates</span><strong>Lifelong, Wireless</strong></div>
+        <div class="spec-row"><span>Connectivity</span><strong>5G + Wi-Fi 6E</strong></div>
+        <div class="spec-row"><span>Sound System</span><strong>18-speaker Spatial Audio</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="ev-process" id="ev-process">
+    <div class="section-header">
+      <span class="eyebrow">How It Works</span>
+      <h2>Your EV in 4 Steps</h2>
+    </div>
+    <div class="process-timeline">
+      <div class="process-step fade-in" data-index="0">
+        <div class="ps-number">01</div>
+        <h3>Consult</h3>
+        <p>Meet our engineers. Tell us your needs, lifestyle, and dream spec.</p>
+      </div>
+      <div class="process-connector"></div>
+      <div class="process-step fade-in" data-index="1">
+        <div class="ps-number">02</div>
+        <h3>Design</h3>
+        <p>We generate a custom design brief — body, battery, interior, and tech stack.</p>
+      </div>
+      <div class="process-connector"></div>
+      <div class="process-step fade-in" data-index="2">
+        <div class="ps-number">03</div>
+        <h3>Build</h3>
+        <p>Precision manufacturing. Every unit hand-finished and QA-tested.</p>
+      </div>
+      <div class="process-connector"></div>
+      <div class="process-step fade-in" data-index="3">
+        <div class="ps-number">04</div>
+        <h3>Deliver</h3>
+        <p>White-glove delivery. Home charging setup and lifetime support included.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="ev-contact" id="ev-contact">
+    <div class="contact-hero-bg"></div>
+    <div class="ev-contact__content fade-in">
+      <span class="eyebrow">Get Started</span>
+      <h2>Ready to Drive the Future?</h2>
+      <p>Talk to a FusionWorks EV specialist. No pressure — just possibilities.</p>
+      <div class="contact-form-row">
+        <input type="text" placeholder="Your Name" class="c-input">
+        <input type="email" placeholder="Email Address" class="c-input">
+        <input type="tel" placeholder="Phone Number" class="c-input">
+        <select class="c-input c-select">
+          <option value="" disabled selected>Select Model</option>
+          <option>FW Urban</option>
+          <option>FW Apex</option>
+          <option>FW Cargo</option>
+          <option>Custom Build</option>
+        </select>
+        <button class="hbtn hbtn--black hbtn--full">Request Consultation</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="ev-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="footer-logo">FUSIONWORKS</span>
+        <p>EV Customization · Home Automation · Intelligent Manufacturing</p>
+      </div>
+      <div class="footer-links">
+        <a href="VisionMission.html">Vision</a>
+        <a href="EVSolutions.html">EV Solutions</a>
+        <a href="HomeAutomation.html">Home Auto</a>
+        <a href="ContactAddress.html">Contact</a>
+      </div>
+      <p class="footer-copy">© 2026 FusionWorks. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="EVSolutions.js"></script>
+</body>
+</html>
