@@ -1,0 +1,535 @@
+/* ============================================================
+   HomeAutomation.css  —  FusionWorks
+   Design system: dark navy base, electric-blue accent, 
+   crisp whites, per-card color accents via CSS custom props
+   ============================================================ */
+
+/* ── Tokens ── */
+:root {
+  --ha-bg:          #0b0f1a;
+  --ha-surface:     #111827;
+  --ha-surface-2:   #1a2235;
+  --ha-border:      rgba(255, 255, 255, 0.07);
+  --ha-blue:        #3b82f6;
+  --ha-blue-glow:   rgba(59, 130, 246, 0.35);
+  --ha-text:        #f0f4ff;
+  --ha-muted:       #8492a6;
+  --ha-radius:      16px;
+  --ha-radius-sm:   8px;
+  --ha-transition:  0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  --ha-font:        'Inter', 'Segoe UI', system-ui, sans-serif;
+}
+
+/* ── Reset ── */
+.ha-section *,
+.ha-section *::before,
+.ha-section *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ── Section wrapper ── */
+.ha-section {
+  background: var(--ha-bg);
+  color: var(--ha-text);
+  font-family: var(--ha-font);
+  overflow: hidden;
+  width: 100%;
+}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.ha-hero {
+  position: relative;
+  text-align: center;
+  padding: 100px 24px 80px;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.ha-hero__eyebrow {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ha-blue);
+  border: 1px solid rgba(59, 130, 246, 0.35);
+  border-radius: 999px;
+  padding: 4px 16px;
+  margin-bottom: 24px;
+}
+
+.ha-hero__headline {
+  font-size: clamp(2.4rem, 6vw, 4.2rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: var(--ha-text);
+  margin-bottom: 20px;
+}
+
+.ha-hero__highlight {
+  background: linear-gradient(90deg, #3b82f6 0%, #8b5cf6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.ha-hero__sub {
+  font-size: 1.1rem;
+  color: var(--ha-muted);
+  line-height: 1.7;
+  max-width: 540px;
+  margin: 0 auto 36px;
+}
+
+.ha-hero__cta-row {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Ambient pulse ring behind hero */
+.ha-hero__pulse {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: radial-gradient(ellipse 60% 50% at 50% 60%, rgba(59,130,246,0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* ============================================================
+   BUTTONS
+   ============================================================ */
+.ha-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  transition: transform var(--ha-transition), box-shadow var(--ha-transition), background var(--ha-transition);
+}
+
+.ha-btn--primary {
+  background: var(--ha-blue);
+  color: #fff;
+  box-shadow: 0 0 0 0 var(--ha-blue-glow);
+}
+.ha-btn--primary:hover {
+  background: #2563eb;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px var(--ha-blue-glow);
+}
+
+.ha-btn--ghost {
+  background: transparent;
+  color: var(--ha-text);
+  border: 1px solid var(--ha-border);
+}
+.ha-btn--ghost:hover {
+  background: var(--ha-surface);
+  border-color: rgba(255,255,255,0.18);
+  transform: translateY(-2px);
+}
+
+.ha-btn--lg {
+  padding: 16px 40px;
+  font-size: 1.05rem;
+}
+
+/* ============================================================
+   STATS BAR
+   ============================================================ */
+.ha-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--ha-border);
+  border-top: 1px solid var(--ha-border);
+  border-bottom: 1px solid var(--ha-border);
+}
+
+.ha-stats__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 32px 16px;
+  background: var(--ha-bg);
+  transition: background var(--ha-transition);
+}
+.ha-stats__item:hover {
+  background: var(--ha-surface);
+}
+
+.ha-stats__value {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--ha-blue);
+  letter-spacing: -0.03em;
+}
+
+.ha-stats__label {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ha-muted);
+}
+
+/* ============================================================
+   TAB NAV
+   ============================================================ */
+.ha-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  padding: 48px 24px 24px;
+  flex-wrap: wrap;
+}
+
+.ha-tab {
+  padding: 10px 24px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  border-radius: 999px;
+  border: 1px solid var(--ha-border);
+  background: transparent;
+  color: var(--ha-muted);
+  cursor: pointer;
+  transition: all var(--ha-transition);
+}
+.ha-tab:hover {
+  color: var(--ha-text);
+  border-color: rgba(255,255,255,0.2);
+  background: var(--ha-surface);
+}
+.ha-tab--active {
+  background: var(--ha-blue);
+  border-color: var(--ha-blue);
+  color: #fff;
+}
+
+/* ============================================================
+   FEATURE CARDS GRID
+   ============================================================ */
+.ha-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 16px 48px 64px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Card enter animation */
+.ha-card {
+  background: var(--ha-surface);
+  border: 1px solid var(--ha-border);
+  border-radius: var(--ha-radius);
+  padding: 32px 28px;
+  position: relative;
+  overflow: hidden;
+  cursor: default;
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.45s ease,
+    transform 0.45s ease,
+    border-color var(--ha-transition),
+    box-shadow var(--ha-transition);
+}
+.ha-card--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Accent left strip */
+.ha-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 16px;
+  bottom: 16px;
+  width: 3px;
+  background: var(--accent, var(--ha-blue));
+  border-radius: 0 2px 2px 0;
+  opacity: 0;
+  transition: opacity var(--ha-transition);
+}
+.ha-card--hovered::before {
+  opacity: 1;
+}
+
+/* Glow on hover */
+.ha-card--hovered {
+  border-color: rgba(255,255,255,0.15);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.4), 0 0 0 1px var(--accent, var(--ha-blue)) inset;
+  transform: translateY(-4px) !important;
+}
+
+.ha-card__icon-wrap {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: var(--ha-surface-2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  transition: background var(--ha-transition);
+}
+.ha-card--hovered .ha-card__icon-wrap {
+  background: color-mix(in srgb, var(--accent, var(--ha-blue)) 18%, var(--ha-surface-2));
+}
+
+.ha-card__title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--ha-text);
+  margin-bottom: 10px;
+}
+
+.ha-card__desc {
+  font-size: 0.875rem;
+  color: var(--ha-muted);
+  line-height: 1.65;
+  margin-bottom: 20px;
+}
+
+.ha-card__badge {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  padding: 4px 12px;
+  border-radius: 999px;
+  color: var(--accent, var(--ha-blue));
+  background: color-mix(in srgb, var(--accent, var(--ha-blue)) 12%, transparent);
+  border: 1px solid color-mix(in srgb, var(--accent, var(--ha-blue)) 30%, transparent);
+}
+
+/* ============================================================
+   HOW IT WORKS STEPS
+   ============================================================ */
+.ha-steps {
+  max-width: 740px;
+  margin: 0 auto;
+  padding: 16px 48px 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.ha-step {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+  padding: 32px 0;
+  border-bottom: 1px solid var(--ha-border);
+  position: relative;
+}
+.ha-step:last-child {
+  border-bottom: none;
+}
+
+/* Connector line */
+.ha-step + .ha-step .ha-step__num::before {
+  content: "";
+  position: absolute;
+  top: -32px;
+  left: 19px;
+  width: 2px;
+  height: 32px;
+  background: var(--ha-border);
+}
+
+.ha-step__num {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--ha-surface-2);
+  border: 1px solid var(--ha-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--ha-blue);
+  letter-spacing: 0.05em;
+  position: relative;
+}
+
+.ha-step__title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--ha-text);
+}
+
+.ha-step__body {
+  font-size: 0.875rem;
+  color: var(--ha-muted);
+  line-height: 1.65;
+}
+
+/* ============================================================
+   DEMO PANEL
+   ============================================================ */
+.ha-demo {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 16px 48px 64px;
+  text-align: center;
+}
+
+.ha-demo__title {
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.ha-demo__subtitle {
+  font-size: 0.9rem;
+  color: var(--ha-muted);
+  margin-bottom: 36px;
+}
+
+.ha-demo__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.ha-device {
+  background: var(--ha-surface);
+  border: 1px solid var(--ha-border);
+  border-radius: var(--ha-radius);
+  padding: 28px 20px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  transition: all var(--ha-transition);
+}
+.ha-device:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+}
+
+.ha-device__icon {
+  font-size: 2rem;
+  transition: filter var(--ha-transition);
+}
+
+.ha-device--off .ha-device__icon {
+  filter: grayscale(1) opacity(0.4);
+}
+
+.ha-device__label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--ha-muted);
+}
+
+.ha-device__status {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding: 3px 14px;
+  border-radius: 999px;
+}
+
+.ha-device--on {
+  border-color: rgba(59, 130, 246, 0.4);
+  background: rgba(59, 130, 246, 0.06);
+}
+.ha-device--on .ha-device__status {
+  background: rgba(59,130,246,0.15);
+  color: #60a5fa;
+}
+.ha-device--off .ha-device__status {
+  background: rgba(255,255,255,0.04);
+  color: var(--ha-muted);
+}
+
+/* ============================================================
+   CTA BANNER
+   ============================================================ */
+.ha-cta-banner {
+  text-align: center;
+  padding: 80px 24px 100px;
+  background: linear-gradient(180deg, var(--ha-bg) 0%, var(--ha-surface) 100%);
+  border-top: 1px solid var(--ha-border);
+}
+
+.ha-cta-banner__heading {
+  font-size: clamp(1.6rem, 3.5vw, 2.8rem);
+  font-weight: 800;
+  margin-bottom: 12px;
+  letter-spacing: -0.02em;
+}
+
+.ha-cta-banner__sub {
+  color: var(--ha-muted);
+  font-size: 1rem;
+  margin-bottom: 36px;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 900px) {
+  .ha-grid {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 16px 24px 48px;
+  }
+  .ha-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .ha-grid {
+    grid-template-columns: 1fr;
+  }
+  .ha-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .ha-steps,
+  .ha-demo {
+    padding: 16px 20px 48px;
+  }
+  .ha-hero {
+    padding: 72px 20px 60px;
+  }
+  .ha-demo__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ============================================================
+   REDUCED MOTION
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  .ha-card,
+  .ha-btn,
+  .ha-device,
+  .ha-tab {
+    transition: none !important;
+  }
+  .ha-card {
+    opacity: 1;
+    transform: none;
+  }
+}
